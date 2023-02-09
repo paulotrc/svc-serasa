@@ -1,5 +1,6 @@
 package br.paulotrc.svcserasa.transportlayers.dto.request;
 
+import br.paulotrc.svcserasa.entites.enumerados.TipoRestricaoSerasa;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,12 +14,9 @@ import java.util.UUID;
 public class SerasaRequest {
 
     private UUID id;
-    private String nome;
     private String cpf;
-    private String ddd;
-    private String telefone;
-    private Boolean temImovel;
-    private Boolean temAutomovel;
-    private BigDecimal renda;
+    private Boolean temRestricao;
+    private TipoRestricaoSerasa tipoRestricaoSerasa;
+    private BigDecimal valorRestricao;
 }
 

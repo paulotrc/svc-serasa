@@ -1,5 +1,6 @@
 package br.paulotrc.svcserasa.entites;
 
+import br.paulotrc.svcserasa.entites.enumerados.TipoRestricaoSerasa;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,12 +18,9 @@ public class Serasa {
 
     @Id
     private UUID id = UUID.randomUUID();
-    private String nome;
     private String cpf;
-    private String ddd;
-    private String telefone;
-    private Boolean temImovel;
-    private Boolean temAutomovel;
-    private BigDecimal renda;
+    private Boolean temRestricao;
+    private TipoRestricaoSerasa tipoRestricaoSerasa;
+    private BigDecimal valorRestricao;
 }
 
