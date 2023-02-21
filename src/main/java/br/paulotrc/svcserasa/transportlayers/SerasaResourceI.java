@@ -40,7 +40,7 @@ public interface SerasaResourceI {
                             schema = @Schema(implementation = Void.class))}),
 
     })
-    @GetMapping (value = "/serasa/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping (value = "/serasa/cpf/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
     @Valid
     ResponseEntity<List<SerasaResponse>> get(
             @Parameter(name = "cpf", description = "Número do CPF do Cliente", required = true)
